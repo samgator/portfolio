@@ -144,7 +144,7 @@ export default function Home() {
             }`}>About</h2>
             <div className="flex flex-col items-center mb-6">
               <Image 
-                src="/pfp.jpg" 
+                src="./pfp.jpg" 
                 alt="Sam Morsics" 
                 width={192}
                 height={192}
