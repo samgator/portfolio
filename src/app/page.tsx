@@ -172,14 +172,16 @@ export default function Home() {
                 href="resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
+                download="Samuel_Morsics_Resume.pdf"
                 className={`block rounded-xl border backdrop-blur-sm transition p-6 shadow-lg hover:shadow-xl ${
                   isDarkMode 
                     ? 'border-white/10 bg-white/5 hover:bg-white/10' 
                     : 'border-blue-200 bg-white/80 hover:bg-white/90'
                 }`}
               >
-                <span className={`text-sm hover:underline ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>View My Resume (PDF) →</span>
+                <span className={`text-sm hover:underline ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>Download My Resume (PDF)</span>
               </a>
+              <Image src="./resume.png" alt="Resume" width={1000} height={1000}/>
             </div>
           </section>
         )}
