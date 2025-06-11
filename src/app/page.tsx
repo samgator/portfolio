@@ -169,7 +169,7 @@ export default function Home() {
               isDarkMode ? 'text-gray-300' : 'text-gray-600'
             }`}>
               <a
-                href="portfolio/resume.pdf"
+                href="resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`block rounded-xl border backdrop-blur-sm transition p-6 shadow-lg hover:shadow-xl ${
