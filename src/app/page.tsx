@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useEffect } from "react";
+import Image from 'next/image';
 
 const projects = [
   {
@@ -72,7 +73,7 @@ export default function Home() {
       {/* Navigation */}
       <nav className="w-full max-w-4xl py-6">
         <div className="flex justify-center space-x-8">
-          {['portfolio', 'about', 'resume', 'contact'].map((section) => (
+          {['portfolio', 'about', 'resume', 'internship', 'contact'].map((section) => (
             <button
               key={section}
               onClick={() => setActiveSection(section)}
@@ -141,11 +142,20 @@ export default function Home() {
             <h2 className={`text-2xl font-semibold mb-4 border-b pb-2 ${
               isDarkMode ? 'border-white/10 text-white' : 'border-blue-200 text-black'
             }`}>About</h2>
-            <p className={`leading-relaxed ${
-              isDarkMode ? 'text-gray-300' : 'text-black'
-            }`}>
-              I am a student at the University of Florida studying Computer Science. I am interested in web development, machine learning, and electrical engineering.
-            </p>
+            <div className="flex flex-col items-center mb-6">
+              <Image 
+                src="/pfp.jpg" 
+                alt="Sam Morsics" 
+                width={192}
+                height={192}
+                className="rounded-full object-cover shadow-lg mb-6"
+              />
+              <p className={`leading-relaxed text-center ${
+                isDarkMode ? 'text-gray-300' : 'text-black'
+              }`}>
+                Hello! I&apos;m Sam, a student at the University of Florida studying Computer Science. I&apos;m from Satellite Beach, Florida and I&apos;m interested in web development, machine learning, and electrical engineering.
+              </p>
+            </div>
           </section>
         )}
 
@@ -159,7 +169,7 @@ export default function Home() {
               isDarkMode ? 'text-gray-300' : 'text-gray-600'
             }`}>
               <a
-                href="/resume.pdf"
+                href="portfolio/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`block rounded-xl border backdrop-blur-sm transition p-6 shadow-lg hover:shadow-xl ${
@@ -170,6 +180,123 @@ export default function Home() {
               >
                 <span className={`text-sm hover:underline ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>View My Resume (PDF) →</span>
               </a>
+            </div>
+          </section>
+        )}
+
+        {/* Internship Section */}
+        {activeSection === 'internship' && (
+          <section className="w-full mb-16">
+            <h2 className={`text-2xl font-semibold mb-4 border-b pb-2 ${
+              isDarkMode ? 'border-white/10 text-white' : 'border-blue-200 text-black'
+            }`}>Blog Posts</h2>
+            <div className="flex flex-col gap-4">
+              <div className={`rounded-xl border backdrop-blur-sm p-6 shadow-lg ${
+                isDarkMode 
+                  ? 'border-white/10 bg-white/5' 
+                  : 'border-blue-200 bg-white/80'
+              }`}>
+                <div className="flex justify-between items-center mb-3">
+                  <h3 className={`text-xl font-semibold ${
+                    isDarkMode ? 'text-white' : 'text-gray-800'
+                  }`}>Week 1: Internship Goals</h3>
+                  <span className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                    May 26, 2025
+                  </span>
+                </div>
+                <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} space-y-4`}>
+                  <span className="block pl-4">
+                    The company I am working for is called GNC Solution, and it is part of the computer science industry. The service they provide is consulting for businesses looking to implement blockchain services and AI. The company&apos;s goals and concepts are very unclear, and their website has been down since before we left for Seoul. My boss doesn&apos;t speak English very well, so it is hard to fully grasp what this company stands for.
+                  </span>
+                  <span className="block pl-4">
+                    My first few days have been filled with lots of learning. For now, my boss wants me and the other interns to familiarize ourselves with machine learning algorithms and how to implement the program in Python. Then, he wants us to apply what we&apos;ve learned in a project for the last 3 weeks of our internship. My boss likes ChatGPT, so he has recommended using it alongside YouTube to learn these new concepts. Most of my time so far has been spent self-learning Python libraries like NumPy, Pandas, and SciKit, to be prepared to work on a project.
+                  </span>
+                  <span className="block pl-4">
+                    The environment in my workplace is very relaxed. There are 3 interns (including myself), 3 employees, and my boss, making it a very small number of people in the office at any given time. There is no dress code (although I still wear business casual), and I often see my boss watching the news or scrolling YouTube Shorts. We are working in a small office with about 20 desks, and have had three meetings so far for our boss to guide us in the right direction for self-learning.
+                  </span>
+                  <span className="block pl-4">
+                    My personal goal for this internship is to expand my programming knowledge and repertoire. Before beginning this internship, I had very little knowledge of machine learning, and now, after just three days, I am developing a strong foundation for learning more advanced machine learning concepts. Professionally, I want to develop better communication skills to get feedback from my boss and integrate better into the workplace culture. I would like to come out of this internship as a more confident person with not only more
+                  </span>
+                </p>
+              </div>
+              <div className={`rounded-xl border backdrop-blur-sm p-6 shadow-lg ${
+                isDarkMode 
+                  ? 'border-white/10 bg-white/5' 
+                  : 'border-blue-200 bg-white/80'
+              }`}>
+                <div className="flex justify-between items-center mb-3">
+                  <h3 className={`text-xl font-semibold ${
+                    isDarkMode ? 'text-white' : 'text-gray-800'
+                  }`}>Week 2: In The Thick of The Internship</h3>
+                  <span className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                    June 4, 2025
+                  </span>
+                </div>
+                <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} space-y-4`}>
+                <span className="block pl-4">
+                The first week at my internship has been largely filled with self learning, and no actual work projects. I have made some small programs in my learning that use machine learning models to predict housing prices, or use various tools to manipulate data. Despite the original plan that my supervisor had set up for the other interns and I, in which we were to self-learn for 3 weeks and then work on a project for the last 3, we decided to ask to begin a project this week. We got out approval, and are now in the process of researching a project that we want to create, likely a website that incorporates data science, machine learning, and the blockchain. 
+                </span>
+                <span className="block pl-4">
+                The relationships that I have with my supervisor and coworkers are great. As far as my supervisor goes, I feel like I can easily connect with him over lunch, and easily approach him with any questions or information that I may have. This appears to be completely opposite of South Korea&apos;s high power distance, because my boss often places himself on the same level as the other interns and I. As for my coworkers, they are very nice but not talkative and haven&apos;t been in the office very much. This aligns with South Korea&apos;s high uncertainty avoidance, as the addition of 3 new, foreign interns causes a workplace filled with uncertainty.
+                </span>
+                <span className="block pl-4">
+                The biggest thing that I have learned from working in Seoul is punctuality. Riding the subway to my internship every day has really opened up my eyes to the importance of being on time and respecting others&apos; schedules. In Seoul, everything runs on a tight timetable, from public transportation to meetings and appointments. Missing the subway by just a minute can delay your whole morning, and being late is often seen as a sign of disrespect. This culture of punctuality has pushed me to be more organized and intentional with my time. It&apos;s a habit I plan to carry with me wherever I go, both professionally and personally.
+                </span>
+                </p>
+              </div>
+              <div className={`rounded-xl border backdrop-blur-sm p-6 shadow-lg ${
+                isDarkMode 
+                  ? 'border-white/10 bg-white/5' 
+                  : 'border-blue-200 bg-white/80'
+              }`}>
+                <div className="flex justify-between items-center mb-3">
+                  <h3 className={`text-xl font-semibold ${
+                    isDarkMode ? 'text-white' : 'text-gray-800'
+                  }`}>Week 3: Lasting Impressions</h3>
+                  <span className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                    June 11, 2025
+                  </span>
+                </div>
+                <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} space-y-4`}>
+                  <span className="block pl-4">
+                  I have gained a great deal of knowledge about the software engineering industry during my internship. Most of what I&apos;ve learned stems from collaboration, as it is a very crucial part of developing any programming project. I have also learned that the fundamentals of programming cannot be shied away from, as they commonly resurface even in the most complex topics.
+                  </span>
+                  <span className="block pl-4">
+                  My organization&apos;s strengths lie in its small team. Having such a tight-knit group of developers and blockchain engineers in one office makes for a productive team. Some of their weaknesses, however, could be that they do not have an actual product on the market right now, and are rushing to launch their cryptocurrency this year. They are scrambling to meet with investors and don&apos;t appear to have the necessary funding at this time. The opportunities that my organization is most definitely benefiting from are AI services. From natural language services like ChatGPT for translation and learning, to Copilot for generating code, AI is used in nearly all parts of my organization. At the same time, AI is also a threat to my company, as it allows other businesses with more resources and funding to produce code and projects at a much higher rate than before, threatening smaller organizations.
+                  </span>
+                  <span className="block pl-4">
+                    The most impactful moment of my time in Seoul has been exploring the city with people whom I&apos;ve just met. Going into this program, I had fears that I would not be able to make the most of my time in South Korea; however, my fears were eased after meeting our cohort, a great group of people. Just getting lost in the city and finding new things in new districts every day has been a very great character-building experience for me, and it will shape the person I am for years to come.
+                  </span>
+                </p>
+              </div>
+            </div>
+            <h2 className={`text-2xl font-semibold mb-4 border-b pb-2 mt-8 ${
+              isDarkMode ? 'border-white/10 text-white' : 'border-blue-200 text-black'
+            }`}>Reflection</h2>
+            <div className="flex flex-col gap-4">
+              <div className={`rounded-xl border backdrop-blur-sm p-6 shadow-lg ${
+                isDarkMode 
+                  ? 'border-white/10 bg-white/5' 
+                  : 'border-blue-200 bg-white/80'
+              }`}>
+                <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  Coming soon
+                </p>
+              </div>
+            </div>
+            <h2 className={`text-2xl font-semibold mb-4 border-b pb-2 mt-8 ${
+              isDarkMode ? 'border-white/10 text-white' : 'border-blue-200 text-black'
+            }`}>NACE Competencies</h2>
+            <div className="flex flex-col gap-4">
+              <div className={`rounded-xl border backdrop-blur-sm p-6 shadow-lg ${
+                isDarkMode 
+                  ? 'border-white/10 bg-white/5' 
+                  : 'border-blue-200 bg-white/80'
+              }`}>
+                <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  Coming soon
+                </p>
+              </div>
             </div>
           </section>
         )}
@@ -194,6 +321,7 @@ export default function Home() {
             </div>
           </section>
         )}
+
       </main>
 
       {/* Footer with Social Links */}
