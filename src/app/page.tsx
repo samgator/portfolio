@@ -329,8 +329,26 @@ export default function Home() {
                       ? 'border-white/10 bg-white/5' 
                       : 'border-blue-200 bg-white/80'
                   }`}>
-                    <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                    {/*<p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                       Throughout the course of my internship, I strengthened my competencies in communication, teamwork, and professionalism. I was frequently communicating with my supervisor and fellow interns each day, and actively listening at group meetings. In the second half of my internship, I was working with other interns each day to finish our project, building my teamwork competency. I was also arriving to work early each day, something which I pride myself on doing. Showing up early each day, working efficiently on projects, and respectfully communicating with others built my skills in professionalism.
+                    </p>*/}
+                    <h3 className={`text-1xl font-semibold mb-4 border-b pb-2 mt-0 ${
+                    isDarkMode ? 'border-white/10 text-white' : 'border-blue-200 text-black'
+                    }`}>Communication</h3>
+                    <p>
+                     I communicated with my supervisor and fellow interns daily, actively listening and providing feedback.
+                    </p>
+                    <h3 className={`text-1xl font-semibold mb-4 border-b pb-2 mt-8 ${
+                    isDarkMode ? 'border-white/10 text-white' : 'border-blue-200 text-black'
+                    }`}>Teamwork</h3>
+                    <p>
+                      I collaborated with other interns on our project, sharing ideas and working together to achieve our goals.
+                    </p>
+                    <h3 className={`text-1xl font-semibold mb-4 border-b pb-2 mt-8 ${
+                    isDarkMode ? 'border-white/10 text-white' : 'border-blue-200 text-black'
+                    }`}>Professionalism</h3>
+                    <p>
+                    I consistently arrived early, worked efficiently, and communicated respectfully with everyone in the office.
                     </p>
                   </div>
                 </div>
