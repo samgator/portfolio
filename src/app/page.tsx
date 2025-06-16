@@ -110,7 +110,7 @@ export default function Home() {
       {/* Navigation */}
       <nav className="w-full max-w-4xl py-6 pt-16 sm:pt-6">
         <div className="flex justify-center space-x-8">
-          {['portfolio', 'about', 'resume', 'internship', 'contact'].map((section) => (
+          {['portfolio', 'about', 'resume', 'internship'].map((section) => (
             <button
               key={section}
               onClick={() => setActiveSection(section)}
@@ -192,6 +192,27 @@ export default function Home() {
               }`}>
                 Hello! I&apos;m Sam, a student at the University of Florida studying Computer Science. I&apos;m from Satellite Beach, Florida and I&apos;m interested in web development, machine learning, and electrical engineering.
               </p>
+            </div>
+            <h2 className={`text-2xl font-semibold mb-4 border-b pb-2 ${
+              isDarkMode ? 'border-white/10 text-white' : 'border-blue-200 text-black'
+            }`}>Contact</h2>
+            <div className="flex justify-center items-center w-full gap-6">
+              <div className="flex items-center gap-2">
+              <span>Phone: </span>
+              <a href="tel:+13214057825" className={`hover:underline transition ${
+                isDarkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-600 hover:text-blue-600'
+              }`}>
+              +1 (321) 405-7825
+              </a>
+            </div>
+            <div className="flex items-center gap-2 ">
+              <span>Email: </span>
+              <a href="mailto:sam.morsics@gmail.com" className={`hover:underline transition ${
+                isDarkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-600 hover:text-blue-600'
+              }`}>
+                sam.morsics@gmail.com
+              </a>
+            </div>
             </div>
           </section>
         )}
@@ -357,26 +378,6 @@ export default function Home() {
           </section>
         )}
 
-        {/* Contact Section */}
-        {activeSection === 'contact' && (
-          <section className="w-full mb-16">
-            <h2 className={`text-2xl font-semibold mb-4 border-b pb-2 ${
-              isDarkMode ? 'border-white/10 text-white' : 'border-blue-200 text-black'
-            }`}>Contact</h2>
-            <div className="flex flex-col gap-4">
-              <a href="tel:+13214057825" className={`hover:underline transition ${
-                isDarkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-600 hover:text-blue-600'
-              }`}>
-                <span style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Noto Color Emoji, Android Emoji, EmojiSymbols' }}>☎️</span> +1 (321) 405-7825
-              </a>
-              <a href="mailto:sam.morsics@gmail.com" className={`hover:underline transition ${
-                isDarkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-600 hover:text-blue-600'
-              }`}>
-                <span style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Noto Color Emoji, Android Emoji, EmojiSymbols' }}>@</span> sam.morsics@gmail.com
-              </a>
-            </div>
-          </section>
-        )}
 
       </main>
 
