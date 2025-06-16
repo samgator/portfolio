@@ -10,8 +10,8 @@ const projects = [
   },
   {
     title: "GNC Project",
-    description: "WIP",
-    link: "",
+    description: "A project I worked on during my internship at GNC Solution, focusing on machine learning and blockchain.",
+    link: "https://github.com/samgator/gnc-project",
   },
   {
     title: "Personal Project",
