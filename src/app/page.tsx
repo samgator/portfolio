@@ -182,10 +182,11 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-center sm:items-start mb-6 gap-6">
               <Image 
                 src="./pfp.jpg" 
-                alt="Sam Morsics" 
+                alt="profile picture" 
                 width={192}
                 height={192}
                 className="rounded object-cover shadow-lg mb-6 sm:mb-0"
+                priority
               />
               <p className={`leading-relaxed text-center sm:text-left ${
                 isDarkMode ? 'text-gray-300' : 'text-black'
@@ -239,7 +240,7 @@ export default function Home() {
               >
                 <span className={`text-sm hover:underline ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>Download My Resume (PDF)</span>
               </a>
-              <Image src="./resume.png" alt="Resume" width={1000} height={1000}/>
+              <Image src="./resume.png" alt="Resume" width={1000} height={1000} priority/>
             </div>
           </section>
         )}
