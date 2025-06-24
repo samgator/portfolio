@@ -110,7 +110,7 @@ export default function Home() {
       {/* Navigation */}
       <nav className="w-full max-w-4xl py-6 pt-16 sm:pt-6">
         <div className="flex justify-center space-x-8">
-          {['portfolio', 'about', 'resume', 'internship'].map((section) => (
+          {['portfolio', 'about', 'resume'].map((section) => (
             <button
               key={section}
               onClick={() => setActiveSection(section)}
