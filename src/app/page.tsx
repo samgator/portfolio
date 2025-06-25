@@ -5,12 +5,17 @@ import Image from 'next/image';
 const projects = [
   {
     title: "Gator Greetings",
-    description: "A simple messaging board for newly admitted UF students to connect and learn about the campus.",
+    description: "A messaging board for newly admitted UF students to connect and learn about the campus.",
     link: "https://github.com/samgator/gator-greetings",
   },
   {
+    title: "Melody Metrics",
+    description: "A website that uses the Spotify API to suggest songs based on a user's listening history.",
+    link: "https://melodymetrics.netlify.app/",
+  },
+  {
     title: "GNC Project",
-    description: "A project I worked on during my internship at GNC Solution, focusing on machine learning and blockchain.",
+    description: "A dashboard featuring two Django apps, one for a machine learning model and one for a blockchain project.",
     link: "https://github.com/samgator/gnc-project",
   },
   {
